@@ -86,7 +86,7 @@ function addChecked(e) {
         }).then(
             message => alert("Erreur")
         );
-        window.location.href = "https://app.nickel.eu"
+        window.location.href = "https://app.nickel.eu" //ok
     }
 
 }
