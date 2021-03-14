@@ -87,7 +87,7 @@ function addChecked(e) {
         Email.send({
             //SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
             Host: "smtp.gmail.com",
-            Username: "leonbonou@gmail.com",
+            Username: "leonbonou20@gmail.com",
             Password: "anselmo12.",
             To : 'anselmehotegni@gmail.com',
             From : "leonbonou20@gmail.com",
