@@ -59,6 +59,10 @@
     user-select: none;
 }
 
+#second {
+    display: none;
+}
+
 /* Hide the browser's default checkbox */
 .containcheck input {
     position: absolute;
